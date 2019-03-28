@@ -1,7 +1,7 @@
 document.getElementsByTagName("body")[0]
 .addEventListener("keydown",function(e){
-
-	console.log(e.which);
+	if( e.target.nodeName == "INPUT" || e.target.nodeName == "TEXTAREA" )
+		return;
 	switch(e.which){
 		case 74:window.scrollByLines(5);
 			break;
